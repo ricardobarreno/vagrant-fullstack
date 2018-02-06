@@ -1,5 +1,6 @@
 sudo apt-get update
 
+
 # Instalamos Git
 sudo apt-get install git
 
@@ -18,17 +19,27 @@ sudo apt-get install -y mongodb-org
 sudo service mongod start
 
 
+# Instalamos yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+
+
 # Instalamos Vue-cli
 sudo npm install -g vue-cli
+
 
 # Instalamos Typescript
 sudo npm install -g typescript
 
+
 # Instalamos nodemon
 sudo npm install -g nodemon
 
+
 # Instalamos ts-node
 sudo npm install -g ts-node
+
 
 # Instalación de Mocha
 sudo npm install -g mocha
